@@ -55,7 +55,6 @@
             counterToolStripMenuItem.Name = "counterToolStripMenuItem";
             counterToolStripMenuItem.Size = new Size(62, 20);
             counterToolStripMenuItem.Text = "&Counter";
-            counterToolStripMenuItem.Click += counterToolStripMenuItem_Click;
             // 
             // toolStripMenuItem1
             // 

@@ -2,38 +2,39 @@
 using Microsoft.Extensions.DependencyInjection;
 using System.Windows.Forms;
 
-namespace Explore.Fluxor.FluxorTuts.WinformsApp
+namespace Explore.Fluxor.FluxorTuts.WinformsApp;
+
+public partial class App : Form
 {
-    public partial class App : Form
+    public App()
     {
-        public App()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
 
-        CounterForm? _counterForm;
-        private void counterToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            // Do this for a 'singleton-ish' window
-            _counterForm = _counterForm.MdiShow(mdiParent: this);
-
-            // Do this to have multiple windows
-            // Program.ServiceProvider.GetRequiredService<CounterForm>().MdiShow(mdiParent: this);
-        }
+        counterToolStripMenuItem.Click += counterToolStripMenuItem_Click;
     }
 
-    file static class Extensions
+    CounterForm? _counterForm;
+    private void counterToolStripMenuItem_Click(object? sender, EventArgs e)
     {
-        public static TForm MdiShow<TForm>(this TForm? form, Form mdiParent) where TForm : Form
+        // Do this for a 'singleton-ish' window
+        _counterForm = _counterForm.MdiShow(mdiParent: this);
+
+        // Do this to have multiple windows
+        // Program.ServiceProvider.GetRequiredService<CounterForm>().MdiShow(mdiParent: this);
+    }
+}
+
+file static class Extensions
+{
+    public static TForm MdiShow<TForm>(this TForm? form, Form mdiParent) where TForm : Form
+    {
+        if (form == null || form.IsDisposed)
         {
-            if (form == null || form.IsDisposed)
-            {
-                form = Program.ServiceProvider.GetRequiredService<TForm>();
-            }
-            form.MdiParent = mdiParent;
-            form.Show();
-            form.BringToFront();
-            return form;
+            form = Program.ServiceProvider.GetRequiredService<TForm>();
         }
+        form.MdiParent = mdiParent;
+        form.Show();
+        form.BringToFront();
+        return form;
     }
 }

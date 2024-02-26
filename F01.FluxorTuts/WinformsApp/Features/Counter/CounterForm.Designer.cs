@@ -28,47 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            lblCurrentCountText = new Label();
             lblCurrentCount = new Label();
             btnIncrementCount = new Button();
             SuspendLayout();
             // 
-            // label1
+            // lblCurrentCountText
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(0, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(84, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Current count:";
+            lblCurrentCountText.AutoSize = true;
+            lblCurrentCountText.Location = new Point(0, 0);
+            lblCurrentCountText.Name = "lblCurrentCountText";
+            lblCurrentCountText.Size = new Size(101, 20);
+            lblCurrentCountText.TabIndex = 0;
+            lblCurrentCountText.Text = "Current count:";
             // 
             // lblCurrentCount
             // 
             lblCurrentCount.AutoSize = true;
-            lblCurrentCount.Location = new Point(90, 0);
+            lblCurrentCount.Location = new Point(103, 0);
             lblCurrentCount.Name = "lblCurrentCount";
-            lblCurrentCount.Size = new Size(0, 15);
+            lblCurrentCount.Size = new Size(0, 20);
             lblCurrentCount.TabIndex = 1;
             // 
             // btnIncrementCount
             // 
-            btnIncrementCount.Location = new Point(9, 18);
+            btnIncrementCount.Location = new Point(10, 24);
+            btnIncrementCount.Margin = new Padding(3, 4, 3, 4);
             btnIncrementCount.Name = "btnIncrementCount";
-            btnIncrementCount.Size = new Size(75, 23);
+            btnIncrementCount.Size = new Size(86, 31);
             btnIncrementCount.TabIndex = 2;
             btnIncrementCount.Text = "Click me";
             btnIncrementCount.UseVisualStyleBackColor = true;
             btnIncrementCount.Click += btnIncrementCount_Click;
             // 
-            // Counter
+            // CounterForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(188, 49);
+            ClientSize = new Size(215, 65);
             Controls.Add(btnIncrementCount);
             Controls.Add(lblCurrentCount);
-            Controls.Add(label1);
-            Name = "Counter";
+            Controls.Add(lblCurrentCountText);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "CounterForm";
             Text = "Counter";
             ResumeLayout(false);
             PerformLayout();
@@ -76,7 +78,7 @@
 
         #endregion
 
-        private Label label1;
+        private Label lblCurrentCountText;
         private Label lblCurrentCount;
         private Button btnIncrementCount;
     }
