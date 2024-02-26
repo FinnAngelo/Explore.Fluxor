@@ -5,9 +5,9 @@ using Fluxor;
 namespace Explore.Fluxor.FluxorTuts.WinformsApp.Features.Counter;
 public partial class CounterForm : Form
 {
-    private IDispatcher Dispatcher { get; }
-    private IState<CounterState> CounterState { get; }
-    private IMapper Mapper { get; }
+    private readonly IDispatcher _dispatcher;
+    private readonly IState<CounterState> _counterState;
+    private readonly IMapper _mapper;
 
     public CounterForm(
         IDispatcher dispatcher,
@@ -15,20 +15,21 @@ public partial class CounterForm : Form
         IMapper mapper
         )
     {
-        InitializeComponent();
-        Dispatcher = dispatcher;
-        CounterState = counterState;
-        Mapper = mapper;
+        _dispatcher = dispatcher;
+        _counterState = counterState;
+        _mapper = mapper;
 
-        CounterState.StateChanged += CounterState_StateChanged;
+        InitializeComponent();
+
+        _counterState.StateChanged += CounterState_StateChanged;
         CounterState_StateChanged(this, new());
     }
 
     private void CounterState_StateChanged(object? sender, EventArgs e)
-        => Mapper.Map(CounterState.Value, this);
+        => _mapper.Map(_counterState.Value, this);
 
     private void btnIncrementCount_Click(object sender, EventArgs e)
-        => Dispatcher.Dispatch(new CounterIncrementAction());
+        => _dispatcher.Dispatch(new CounterIncrementAction());
 
     public class MappingProfile : Profile
     {
