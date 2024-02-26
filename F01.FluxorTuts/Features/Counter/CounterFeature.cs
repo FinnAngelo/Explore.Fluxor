@@ -30,6 +30,7 @@ public static class CounterReducers
         return state with
         {
             CurrentCount = state.CurrentCount + 1
+
         };
     }
 }

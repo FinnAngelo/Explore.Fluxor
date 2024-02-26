@@ -29,28 +29,14 @@ public partial class CounterForm : Form
 
     private void btnIncrementCount_Click(object sender, EventArgs e)
         => Dispatcher.Dispatch(new CounterIncrementAction());
-}
 
-/*
- * Note: Not sure about this; its not very elegant? 
- * Its sortof to avoid databinding etc... I need to think about this
- **/
-public partial class CounterForm : ICounterForm
-{
-    public string CurrentCount { set { this.lblCurrentCount.Text = value; } }
-}
-
-file interface ICounterForm
-{
-    string CurrentCount { set; }
-}
-
-file class MappingProfile : Profile
-{
-    public MappingProfile()
+    public class MappingProfile : Profile
     {
-        //CreateMap<CounterState, CounterForm>()
-        //.ForMember(dest => dest.lblCurrentCount.Text, opt => opt.MapFrom(src => src.CurrentCount));
-        CreateMap<CounterState, ICounterForm>();
+        public MappingProfile()
+        {
+            CreateMap<CounterState, CounterForm>()
+            .ForPath(dest => dest.lblCurrentCount.Text, opt => opt.MapFrom(src => src.CurrentCount));
+        }
     }
+
 }
