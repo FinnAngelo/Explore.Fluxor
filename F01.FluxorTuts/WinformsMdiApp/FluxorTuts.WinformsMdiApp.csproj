@@ -7,8 +7,8 @@
 		<UseWindowsForms>true</UseWindowsForms>
 		<ImplicitUsings>enable</ImplicitUsings>
 
-		<RootNamespace>Explore.Fluxor.FluxorTuts.WinformsApp</RootNamespace>
-		<AssemblyName>Explore.Fluxor.FluxorTuts.WinformsApp</AssemblyName>
+		<RootNamespace>Explore.Fluxor.FluxorTuts.WinformsMdiApp</RootNamespace>
+		<AssemblyName>Explore.Fluxor.FluxorTuts.WinformsMdiApp</AssemblyName>
 
 	</PropertyGroup>
 

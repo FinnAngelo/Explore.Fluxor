@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluxorTuts.WinformsApp", "WinformsApp\FluxorTuts.WinformsApp.csproj", "{E9C7A40D-4086-4A7C-89CA-BC46B5A9A7E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluxorTuts.WinformsMidApp", "WinformsMdiApp\FluxorTuts.WinformsMdiApp.csproj", "{E9C7A40D-4086-4A7C-89CA-BC46B5A9A7E6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluxorTuts.Features", "Features\FluxorTuts.Features.csproj", "{117A638F-712F-45A6-9785-4134A7F114ED}"
 EndProject

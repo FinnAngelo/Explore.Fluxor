@@ -1,4 +1,4 @@
-﻿namespace Explore.Fluxor.FluxorTuts.WinformsApp.Features.Counter
+﻿namespace Explore.Fluxor.FluxorTuts.WinformsMdiApp.Features.Counter
 {
     partial class CounterForm
     {

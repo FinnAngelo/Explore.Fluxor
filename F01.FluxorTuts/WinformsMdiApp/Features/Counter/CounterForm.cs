@@ -2,7 +2,7 @@
 using Explore.Fluxor.FluxorTuts.Features.Counter;
 using Fluxor;
 
-namespace Explore.Fluxor.FluxorTuts.WinformsApp.Features.Counter;
+namespace Explore.Fluxor.FluxorTuts.WinformsMdiApp.Features.Counter;
 public partial class CounterForm : Form
 {
     private readonly IDispatcher _dispatcher;

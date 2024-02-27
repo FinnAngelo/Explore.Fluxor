@@ -1,10 +1,10 @@
 using Explore.Fluxor.FluxorTuts.Features.Counter;
-using Explore.Fluxor.FluxorTuts.WinformsApp.Features.Counter;
+using Explore.Fluxor.FluxorTuts.WinformsMdiApp.Features.Counter;
 using Fluxor;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace Explore.Fluxor.FluxorTuts.WinformsApp;
+namespace Explore.Fluxor.FluxorTuts.WinformsMdiApp;
 
 internal static class Program
 {

@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
 using Explore.Fluxor.FluxorTuts.Features.Counter;
-using Explore.Fluxor.FluxorTuts.WinformsApp.Features.Counter;
+using Explore.Fluxor.FluxorTuts.WinformsMdiApp.Features.Counter;
 using Fluxor;
 using Microsoft.Extensions.DependencyInjection;
 using System.Windows.Forms;
 
-namespace Explore.Fluxor.FluxorTuts.WinformsApp;
+namespace Explore.Fluxor.FluxorTuts.WinformsMdiApp;
 
 public partial class App : Form
 {

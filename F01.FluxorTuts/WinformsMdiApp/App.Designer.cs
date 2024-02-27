@@ -1,4 +1,4 @@
-﻿namespace Explore.Fluxor.FluxorTuts.WinformsApp
+﻿namespace Explore.Fluxor.FluxorTuts.WinformsMdiApp
 {
     partial class App
     {
