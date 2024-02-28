@@ -31,13 +31,13 @@
             menuStrip1 = new MenuStrip();
             homeToolStripMenuItem = new ToolStripMenuItem();
             counterToolStripMenuItem = new ToolStripMenuItem();
-            toolStripMenuItem1 = new ToolStripMenuItem();
+            fetchDataToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { homeToolStripMenuItem, counterToolStripMenuItem, toolStripMenuItem1 });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { homeToolStripMenuItem, counterToolStripMenuItem, fetchDataToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(560, 24);
@@ -56,11 +56,11 @@
             counterToolStripMenuItem.Size = new Size(62, 20);
             counterToolStripMenuItem.Text = "&Counter";
             // 
-            // toolStripMenuItem1
+            // fetchDataToolStripMenuItem
             // 
-            toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(75, 20);
-            toolStripMenuItem1.Text = "&Fetch Data";
+            fetchDataToolStripMenuItem.Name = "fetchDataToolStripMenuItem";
+            fetchDataToolStripMenuItem.Size = new Size(75, 20);
+            fetchDataToolStripMenuItem.Text = "&Fetch Data";
             // 
             // App
             // 
@@ -70,7 +70,7 @@
             Controls.Add(menuStrip1);
             IsMdiContainer = true;
             MainMenuStrip = menuStrip1;
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "App";
             Text = "App";
             menuStrip1.ResumeLayout(false);
@@ -84,6 +84,6 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem homeToolStripMenuItem;
         private ToolStripMenuItem counterToolStripMenuItem;
-        private ToolStripMenuItem toolStripMenuItem1;
+        private ToolStripMenuItem fetchDataToolStripMenuItem;
     }
 }
